@@ -1,3 +1,4 @@
-﻿// See https://aka.ms/new-console-template for more information
+﻿using Advent.Solutions;
 
-Console.WriteLine("Hello, World!");
+var day = new Day1();
+day.Run();
