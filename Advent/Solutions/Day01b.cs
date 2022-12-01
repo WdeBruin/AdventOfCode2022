@@ -1,3 +1,5 @@
+using Advent.Extensions;
+
 namespace Advent.Solutions;
 
 public class Day01b : DayBase
@@ -13,17 +15,12 @@ public class Day01b : DayBase
         {
             if (string.IsNullOrWhiteSpace(l))
             {
-                var lowestTopElf = highestCaloriesElfs.Min();
-                if (calories > lowestTopElf)
-                {
-                    var idx = Array.IndexOf(highestCaloriesElfs, lowestTopElf);
-                    highestCaloriesElfs[idx] = calories;
-                }
+                highestCaloriesElfs.ReplaceLowestIfHigher(calories);
                 calories = 0;
                 continue;
             }
 
-            calories += int.Parse(l);
+            calories += l.ToInt();
         }
 
         var total = highestCaloriesElfs.Sum();

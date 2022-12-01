@@ -1,3 +1,5 @@
+using Advent.Extensions;
+
 namespace Advent.Solutions;
 
 public class Day01a : DayBase
@@ -18,7 +20,7 @@ public class Day01a : DayBase
                 continue;
             }
 
-            calories += int.Parse(l);
+            calories += l.ToInt();
         }
         
         WriteLine($"Highest calories elf: {highestCaloriesElf}");
