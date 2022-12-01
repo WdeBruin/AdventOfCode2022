@@ -13,4 +13,9 @@ public abstract class DayBase
     {
         Console.Write(val);
     }
+
+    protected static string[] ReadInput(string fileName)
+    {
+        return File.ReadAllLines($"Input/{fileName}");
+    }
 }
