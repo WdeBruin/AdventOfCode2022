@@ -1,5 +1,4 @@
 ﻿using Advent.Extensions;
-using System.Security.Cryptography.X509Certificates;
 
 namespace Advent.Solutions;
 
