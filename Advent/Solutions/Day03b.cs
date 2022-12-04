@@ -6,8 +6,7 @@ public class Day03b : DayBase
     {
         var lines = ReadInput("Day03.txt");
 
-        var badges = new List<char>();
-        var prio = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";
+        var badges = new List<char>();        
                 
         var chunks = lines.Chunk(3);
         foreach(var groupSacks in chunks)
@@ -25,7 +24,7 @@ public class Day03b : DayBase
         var score = 0;
         foreach (var item in badges)
         {
-            score += prio.IndexOf(item) + 1;
+            score += (item % 32) + (char.IsUpper(item) ? 26 : 0); // ASCII table numbers, modulo 32 works for getting index at start 1.
         }
 
         WriteLine($"Total score: {score}");

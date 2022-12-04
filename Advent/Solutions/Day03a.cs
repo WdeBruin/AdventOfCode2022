@@ -7,8 +7,7 @@ public class Day03a : DayBase
         var lines = ReadInput("Day03.txt");
 
         var doublePacked = new List<char>();
-        var prio = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";
-
+        
         foreach (var sack in lines)
         {
             var compartments = sack.Chunk(sack.Length / 2);
@@ -27,7 +26,7 @@ public class Day03a : DayBase
         var score = 0;
         foreach (var item in doublePacked)
         {
-            score += prio.IndexOf(item) + 1;
+            score += (item % 32) + (char.IsUpper(item) ? 26 : 0); // ASCII table numbers, modulo 32 works for getting index at start 1.
         }
 
         WriteLine($"Total score: {score}");
