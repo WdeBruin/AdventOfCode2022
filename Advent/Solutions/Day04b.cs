@@ -14,8 +14,8 @@ public class Day04b : DayBase
             var one = pair.Split(',')[0];
             var two = pair.Split(',')[1];
 
-            var oneN = one.Split('-').ToIntArray();
-            var twoN = two.Split("-").ToIntArray();
+            var oneN = one.ToIntArray('-');
+            var twoN = two.ToIntArray('-');
 
             for (int i = oneN[0]; i <= oneN[1]; i++)
             {
