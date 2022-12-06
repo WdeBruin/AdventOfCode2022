@@ -1,5 +1,4 @@
-﻿using System.Collections;
-using System.Text.RegularExpressions;
+﻿using System.Text.RegularExpressions;
 using Advent.Extensions;
 
 namespace Advent.Solutions;
@@ -58,8 +57,10 @@ public class Day05b : DayBase
 
     private static void Log(int turn, Stack<string>[] stacks)
     {
+        Console.Clear();
         WriteLine($"Turn {turn}");
         stacks.Print();
         WriteLine(string.Empty);
+        Task.Delay(500).Wait();
     }
 }
