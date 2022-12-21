@@ -1,4 +1,4 @@
 ﻿using Advent.Solutions;
 
-var day = new Day08();
+var day = new Day09();
 day.Run();
