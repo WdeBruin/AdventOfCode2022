@@ -34,6 +34,6 @@ public class Day07Tests
         var lines = input.Split("\r\n");
 
         var result = sut.Solve(lines);
-        Assert.AreEqual("95437", result);
+        Assert.That(result, Is.EqualTo("95437"));
     }
 }
